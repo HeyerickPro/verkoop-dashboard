@@ -248,7 +248,8 @@ function readCSV(file){
 }
 
 function parseCSV(text){
-  const lines = text.split(/?
+  const lines = text.split(/
+?
 /).filter(l=>l.trim());
   const headers = lines[0].split(';');
   return lines.slice(1).map(line=>{
